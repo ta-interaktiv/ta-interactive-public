@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+    <meta charset="utf-8">
+    <title>GULP_REPLACE_TITLE</title>
+
+    <base href="GULP_REPLACE_BASE">
+
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Tages-Anzeiger">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="GULP_REPLACE_TITLE">
+    <meta property="og:url" content="GULP_REPLACE_SHARELINK">
+    <meta property="og:image" content="GULP_REPLACE_SHAREIMG">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:description" content="GULP_REPLACE_SHARETEXT">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <script type="text/javascript">
+      window.base = 'GULP_REPLACE_BASE';
+      window.projectIdentifier = 'GULP_REPLACE_PROJECTID';
+    </script>
+
+    <script src="js/templates.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+    <div id="header" class="standalone-only">
+      
+    </div>
+
+    <div id="wrapper">
+
+      <div class="standalone-only" style="position: absolute; top: 0px; left: 50%; margin-left: 512px;">
+        <div class="ad-space" data-adtype="halfpagead"></div>
+      </div>
+
+      <div class="content standalone-only" style="margin-bottom: 20px;">
+        <div class="ad-space" data-adtype="wideboard"></div>
+      </div>
+      
+      <div class="content no-margin">
+        <div class="clearfix">
+
+        </div>
+      </div>
+
+    </div>
+
+    <div id="loading-overlay"></div>
+
+    <script type="text/javascript">
+
+        function createEl(t,e){var i,n=document.createElement(t||"div");for(i in e)n[i]=e[i];return n}function ins(t){for(var e=1,i=arguments.length;i>e;e++)t.appendChild(arguments[e]);return t}function addAnimation(t,e,i,n){var o=["opacity",e,~~(100*t),i,n].join("-"),s=.01+i/n*100,r=Math.max(1-(1-t)/e*(100-s),t),a=useCssAnimations.substring(0,useCssAnimations.indexOf("Animation")).toLowerCase(),l=a&&"-"+a+"-"||"";return animations[o]||(sheet.insertRule("@"+l+"keyframes "+o+"{0%{opacity:"+r+"}"+s+"%{opacity:"+t+"}"+(s+.01)+"%{opacity:1}"+(s+e)%100+"%{opacity:"+t+"}100%{opacity:"+r+"}}",sheet.cssRules.length),animations[o]=1),o}function vendor(t,e){var i,n,o=t.style;for(e=e.charAt(0).toUpperCase()+e.slice(1),n=0;n<prefixes.length;n++)if(i=prefixes[n]+e,void 0!==o[i])return i;return void 0!==o[e]?e:void 0}function css(t,e){for(var i in e)t.style[vendor(t,i)||i]=e[i];return t}function merge(t){for(var e=1;e<arguments.length;e++){var i=arguments[e];for(var n in i)void 0===t[n]&&(t[n]=i[n])}return t}function pos(t){for(var e={x:t.offsetLeft,y:t.offsetTop};t=t.offsetParent;)e.x+=t.offsetLeft,e.y+=t.offsetTop;return e}function getColor(t,e){return"string"==typeof t?t:t[e%t.length]}function Spinner(t){this.opts=merge(t||{},Spinner.defaults,defaults)}function initVML(){function t(t,e){return createEl("<"+t+' xmlns="urn:schemas-microsoft.com:vml" class="spin-vml">',e)}sheet.addRule(".spin-vml","behavior:url(#default#VML)"),Spinner.prototype.lines=function(e,i){function n(){return css(t("group",{coordsize:a+" "+a,coordorigin:-r+" "+-r}),{width:a,height:a})}function o(e,o,s){ins(c,ins(css(n(),{rotation:360/i.lines*e+"deg",left:~~o}),ins(css(t("roundrect",{arcsize:i.corners}),{width:r,height:i.width,left:i.radius,top:-i.width>>1,filter:s}),t("fill",{color:getColor(i.color,e),opacity:i.opacity}),t("stroke",{opacity:0}))))}var s,r=i.length+i.width,a=2*r,l=2*-(i.width+i.length)+"px",c=css(n(),{position:"absolute",top:l,left:l});if(i.shadow)for(s=1;s<=i.lines;s++)o(s,-2,"progid:DXImageTransform.Microsoft.Blur(pixelradius=2,makeshadow=1,shadowopacity=.3)");for(s=1;s<=i.lines;s++)o(s);return ins(e,c)},Spinner.prototype.opacity=function(t,e,i,n){var o=t.firstChild;n=n.shadow&&n.lines||0,o&&e+n<o.childNodes.length&&(o=o.childNodes[e+n],o=o&&o.firstChild,o=o&&o.firstChild,o&&(o.opacity=i))}}var prefixes=["webkit","Moz","ms","O"],animations={},useCssAnimations,sheet=function(){var t=createEl("style",{type:"text/css"});return ins(document.getElementsByTagName("head")[0],t),t.sheet||t.styleSheet}(),defaults={lines:12,length:7,width:5,radius:10,rotate:0,corners:1,color:"#000",direction:1,speed:1,trail:100,opacity:.25,fps:20,zIndex:2e9,className:"spinner",top:"50%",left:"50%",position:"absolute"};Spinner.defaults={},merge(Spinner.prototype,{spin:function(t){this.stop();{var e=this,i=e.opts,n=e.el=css(createEl(0,{className:i.className}),{position:i.position,width:0,zIndex:i.zIndex});i.radius+i.length+i.width}if(css(n,{left:i.left,top:i.top}),t&&t.insertBefore(n,t.firstChild||null),n.setAttribute("role","progressbar"),e.lines(n,e.opts),!useCssAnimations){var o,s=0,r=(i.lines-1)*(1-i.direction)/2,a=i.fps,l=a/i.speed,c=(1-i.opacity)/(l*i.trail/100),p=l/i.lines;!function d(){s++;for(var t=0;t<i.lines;t++)o=Math.max(1-(s+(i.lines-t)*p)%l*c,i.opacity),e.opacity(n,t*i.direction+r,o,i);e.timeout=e.el&&setTimeout(d,~~(1e3/a))}()}return e},stop:function(){var t=this.el;return t&&(clearTimeout(this.timeout),t.parentNode&&t.parentNode.removeChild(t),this.el=void 0),this},lines:function(t,e){function i(t,i){return css(createEl(),{position:"absolute",width:e.length+e.width+"px",height:e.width+"px",background:t,boxShadow:i,transformOrigin:"left",transform:"rotate("+~~(360/e.lines*o+e.rotate)+"deg) translate("+e.radius+"px,0)",borderRadius:(e.corners*e.width>>1)+"px"})}for(var n,o=0,s=(e.lines-1)*(1-e.direction)/2;o<e.lines;o++)n=css(createEl(),{position:"absolute",top:1+~(e.width/2)+"px",transform:e.hwaccel?"translate3d(0,0,0)":"",opacity:e.opacity,animation:useCssAnimations&&addAnimation(e.opacity,e.trail,s+o*e.direction,e.lines)+" "+1/e.speed+"s linear infinite"}),e.shadow&&ins(n,css(i("#000","0 0 4px #000"),{top:"2px"})),ins(t,ins(n,i(getColor(e.color,o),"0 0 1px rgba(0,0,0,.1)")));return t},opacity:function(t,e,i){e<t.childNodes.length&&(t.childNodes[e].style.opacity=i)}});var probe=css(createEl("group"),{behavior:"url(#default#VML)"});!vendor(probe,"transform")&&probe.adj?initVML():useCssAnimations=vendor(probe,"animation");
+
+        var opts = {
+          lines: 10, // The number of lines to draw
+          length: 0, // The length of each line
+          width: 8, // The line thickness
+          radius: 20, // The radius of the inner circle
+          corners: 1, // Corner roundness (0..1)
+          rotate: 0, // The rotation offset
+          direction: 1, // 1: clockwise, -1: counterclockwise
+          color: '#222222', // #rgb or #rrggbb or array of colors
+          speed: 1, // Rounds per second
+          trail: 60, // Afterglow percentage
+          shadow: false, // Whether to render a shadow
+          hwaccel: false, // Whether to use hardware acceleration
+          className: 'spinner', // The CSS class to assign to the spinner
+          zIndex: 2e9, // The z-index (defaults to 2000000000)
+          top: '50%', // Top position relative to parent
+          left: '50%' // Left position relative to parent
+        };
+        
+        var spinner = new Spinner(opts).spin(document.getElementById('loading-overlay'));
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,562 @@
+/**********************
+ *                    *
+ *     MAIN-SASS      *
+ *                    *
+ **********************/
+
+@import "reset";
+@import "fonts";
+@import "variables";
+@import "ta-styles";
+@import "custom";
+
+body {
+    
+}
+
+#loading-overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: url("../imgs/loading_back.png") repeat 0px 0px transparent;
+}
+
+
+/* HEADER */
+#header {
+    box-shadow: 0 6px 12px rgba(0,0,0,.155);
+    background-color: #fff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 10;
+    height: 60px;
+
+    font-family: "Benton Sans Cond";
+    font-size: 16px;
+}
+body.in-iframe #header{
+    display: none;
+}
+
+body.in-iframe .standalone-only {
+    display: none;
+}
+
+#header > .inside {
+    position: relative;
+}
+
+#header .logo {
+    position: absolute;
+    top: 12px;
+    left: 20px;
+}
+
+#header .meta-nav {
+    float: right;
+}
+
+#header .meta-nav li {
+    float: left;
+    margin: 5px 20px 0px 0px;
+}
+
+#header .meta-nav a {
+    color: $textColor;
+}
+
+#header .meta-nav .icon {
+    color: $textColor;
+    float: right;
+    font-family: fontawesome;
+    font-size: 20px;
+}
+
+#header .meta-nav a:hover {
+    color: $linkColor;
+}
+
+#header .share-icon .count {
+    font-size:12px;
+    padding: 0.75em;
+    font-family: "Benton Sans Cond Black";
+}
+
+/* WRAPPER & CONTENT */
+#wrapper {
+    display: none;
+    margin-top: 80px;
+}
+body.in-iframe #wrapper {
+    margin-top: 0px;
+}
+body.mobile.in-iframe #wrapper {
+    /*margin: 0px 13px;*/
+}
+
+#wrapper > .content,
+#header .inside {
+    margin: 0px auto;
+    max-width: 978px;
+    padding: 17px;
+}
+#wrapper > .content {
+    padding: 0px 17px;   
+}
+body.in-iframe #wrapper > .content {
+    padding: 0px;
+}
+
+
+/* OVERLAYS */
+.overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding: 50px;
+    width: 100%;
+    height: 100%;
+    background: url("../imgs/overlay-back.png") repeat 0px 0px transparent;
+    z-index: 11;
+    overflow: auto;
+}
+.overlay.white {
+    background: url("../imgs/loading_back.png") repeat 0px 0px transparent;
+    padding: 100px;
+}
+body.mobile .overlay {
+    padding: 0px;
+}
+
+.overlay > .inside-overlay {
+    background: #333333;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    color: #FFFFFF;
+    position: relative;
+    max-width: 1028px;
+    margin: 0px auto;
+}
+.overlay.white > .inside-overlay {
+    background: #FFFFFF;
+    color: #222222;
+    height: auto;
+    max-width: 500px;
+    box-shadow: 0 0 20px rgba(0,0,0,.3);
+}
+body.mobile .overlay > .inside-overlay {
+    padding: 10px;
+}
+
+.overlay > .inside-overlay h2,
+.overlay > .inside-overlay h3 {
+    padding-right: 70px;
+}
+.overlay > .inside-overlay h3 {
+    margin-bottom: 20px;
+}
+body.mobile .overlay > .inside-overlay h2,
+body.mobile .overlay > .inside-overlay h3 {
+    padding-right: 0px;
+}
+
+.overlay > .inside-overlay iframe {
+    padding-bottom: 10px;
+}
+
+.overlay > .inside-overlay .close-icon {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 70px;
+    height: 65px;
+    background: url("../imgs/close-icon.png") no-repeat 0px -2px transparent;
+    cursor: pointer;
+    z-index: 4;
+}
+.overlay.white > .inside-overlay .close-icon {
+    background: url("../imgs/close-icon_black.png") no-repeat 0px -2px transparent;
+}
+.overlay > .inside-overlay .close-icon:hover {
+    background-position: -70px -2px;
+}
+body.mobile .overlay > .inside-overlay .close-icon {
+    width: 35px;
+    background-position: -19px -10px;
+}
+body.mobile .overlay > .inside-overlay .close-icon:hover {
+    width: 30px;
+    background-position: -89px -10px;
+}
+
+.overlay > .inside-overlay p.caption {
+    margin-top: 10px;
+    position: relative;
+}
+
+body.mobile .overlay > .inside-overlay p.caption {
+    margin: 0px !important;
+    padding: 10px;
+    width: auto !important;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: url("../imgs/black70.png") repeat 0px 0px transparent;
+}
+
+.overlay table {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.overlay table tr {
+    border-top: 1px solid #DDDDDD;
+}
+
+.overlay .article-teaser {
+    margin-bottom: 20px;
+    float: left;
+}
+
+
+.overlay .article-teaser a {
+    padding-left: 15px;
+    background: url("../imgs/goto-article.png") no-repeat 0px 5px transparent;
+    margin-right: 10px;
+}
+
+.overlay .caption .photo-pagination {
+    position: absolute;
+    right: 100%;
+    width: 100px;
+    top: 0px;
+    text-align: right;
+    margin-right: 20px;
+}
+
+body.mobile .overlay .photo-pagination {
+    position: relative;
+    display: inline-block;
+    right: auto;
+    top: auto;
+    width: auto;
+    margin: 0px;
+    margin-right: 10px;
+    text-align: left;
+}
+
+.overlay.video > .inside-overlay,
+.overlay.article > .inside-overlay {
+    padding: 0px !important;
+    height: auto;
+}
+
+.overlay.video > .inside-overlay object, 
+.overlay.video > .inside-overlay video {
+    width: 640px;
+    height: 386px;
+    float: left;
+}
+.overlay.article > .inside-overlay img {
+    float: left;
+}
+body.mobile .overlay.article > .inside-overlay img {
+    max-height: 150px;
+    width: auto;
+    margin: 20px 20px 0px 20px;
+}
+
+.overlay.video > .inside-overlay .caption {
+    padding: 20px;
+    float: left;
+}
+.overlay.article > .inside-overlay .caption {
+    padding: 20px;
+    float: left;
+    width: 400px;
+}
+body.mobile .overlay.article > .inside-overlay .caption {
+    width: auto;
+}
+
+.overlay.video > .inside-overlay .caption h2,
+.overlay.article > .inside-overlay .caption h2 {
+    margin-bottom: 10px;
+}
+
+
+.overlay.video > .inside-overlay .caption .article-teaser,
+.overlay.article > .inside-overlay .caption .article-teaser {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #FFFFFF;
+}
+
+.overlay.gallery .gallery-wrapper {
+    width: 100%;
+    text-align: center;
+    padding: 0px 50px;
+    position: relative;
+}
+body.mobile .overlay.gallery .gallery-wrapper {
+    padding: 0px 20px;
+}
+
+.overlay.gallery .gallery-container {
+    display: inline-block;
+}
+
+.overlay.gallery .gallery-container .image-container {
+    background: #777777;
+    float: left;
+    width: 40px;
+    height: 100%;
+    margin-right: 1px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.overlay.gallery .gallery-container .image-container.loading {
+    background: #191919;
+}
+
+.overlay.gallery .gallery-container .image-container img {
+    height: 100%;
+}
+
+.overlay.gallery .gallery-container .image-container:hover img {
+    opacity: 0.8;
+}
+
+.overlay.gallery .gallery-container .image-container .caption {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    background: url("../imgs/black70.png") repeat 0px 0px transparent;
+    padding: 10px;
+    text-align: left;
+    display: none;
+}
+.overlay.gallery .gallery-container .image-container .caption p {
+    margin: 0px;
+}
+
+
+
+.overlay.slideshow .slideshow-container {
+    position: relative;
+}
+
+.overlay.slideshow .slideshow-container .image-container {
+    position: absolute;
+    padding: 0px 50px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+body.mobile .overlay.slideshow .slideshow-container .image-container {
+    padding: 0px 20px;
+}
+
+.overlay.slideshow .slideshow-container .image-container.width-100 img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay.slideshow .slideshow-container .image-container.height-100 img {
+    width: auto;
+    height: 100%;
+}
+
+
+.overlay .arrow {
+    position: absolute;
+    top: 0px;
+    width: 70px;
+    height: 100%;
+    cursor: pointer;
+    z-index: 3;
+}
+body.mobile .overlay .arrow {
+    width: 30px;
+}
+.overlay.photoshow .arrow {
+    width: 50% !important;
+}
+.overlay .arrow > .icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    width: 30px;
+    height: 50px;
+    background: url("../imgs/gallery-arrows.png") no-repeat 0px 0px transparent;
+}
+.overlay .arrow.right {
+    right: 0px;
+}
+.overlay .arrow.right > .icon {
+    background-position: -60px 0px;
+    right: 20px;
+}
+body.mobile .overlay .arrow.right > .icon {
+    right: 0px;
+}
+.overlay .arrow.right:hover > .icon {
+    background-position: -90px 0px;
+}
+.overlay .arrow.left {
+    left: 0px;
+}
+.overlay .arrow.left > .icon {
+    background-position: -30px 0px;
+    left: 20px
+}
+body.mobile .overlay .arrow.left > .icon {
+    left: 0px;
+}
+.overlay .arrow.left:hover > .icon {
+    background-position: 0px 0px;
+}
+
+
+/* TOOLTIP */
+
+.hover-box {
+    position: absolute;
+    z-index: 4;
+}
+
+.ta-tooltip {
+    position: absolute;
+    width: 400px;
+    padding: 0px 0px 35px 0px;
+    z-index: 3;
+}
+.ta-tooltip.align-bottom {
+    padding: 35px 0px 0px 0px;
+}
+
+.ta-tooltip > .inside-tooltip {
+    padding: 20px;
+    background: #FFFFFF;
+    box-shadow: 0 0 20px rgba(0,0,0,.3);
+}
+
+.ta-tooltip > .inside-tooltip p:last-child {
+    margin-bottom: 0px;
+}
+
+.ta-tooltip .tooltip-arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    width: 70px;
+    height: 35px;
+    background: url("../imgs/tooltip-arrows.png") no-repeat 0px -105px transparent;
+}
+
+.ta-tooltip.align-bottom .tooltip-arrow {
+    bottom: auto;
+    top: 0px;
+    background-position: 0px 0px;
+}
+
+.ta-tooltip > .inside-tooltip .close-icon {
+    width: 70px;
+    height: 65px;
+    background: url("../imgs/close-icon_black.png") no-repeat 0px -2px transparent;
+    cursor: pointer;
+    float: right;
+    margin: -20px -20px 0px 0px;
+}
+.ta-tooltip > .inside-tooltip .close-icon:hover {
+    background-position: -70px -2px;
+}
+
+
+/* GRID */
+
+
+.grid-layout .grid-cell {
+    overflow: hidden;
+    cursor: pointer;
+    background: #555555;
+}
+
+.grid-layout .grid-cell .cell-caption {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    background: url("../imgs/loading_back.png") repeat 0px 0px transparent;
+    width: 100%;
+
+    font-family: "Benton Sans Cond";
+    font-size: 16px;
+    line-height: 20px;
+
+    padding: 10px;
+}
+
+.grid-layout .grid-cell .cell-caption .cell-subtitle,
+.grid-layout .grid-cell .cell-content {
+    display: none;
+}
+
+.cell-caption strong {
+    color: #000000;
+    font-family: "Benton Sans Cond Black";
+    font-size: 22px;
+}
+
+.grid-layout .grid-cell .cell-arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    width: 70px;
+    height: 35px;
+    background: url("../imgs/tooltip-arrows.png") no-repeat 0px 0px transparent;
+    margin-left: -35px;
+    display: none;
+}
+
+.grid-layout .grid-cell .image-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.grid-layout .grid-cell .image-container img {
+    /*width: 100%;*/
+    position: absolute;
+}
+
+.grid-layout .grid-cell.hover .image-container img {
+    opacity: 0.8;
+}
+
+
+.grid-layout > .cell-content {
+    margin-top: 20px;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-left: 170px;
+    width: 640px;
+    margin-bottom: 50px;
+}
+
+body.mobile .grid-layout > .cell-content {
+    width: 100%;
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+/* SVG INFOGRAPHIC */

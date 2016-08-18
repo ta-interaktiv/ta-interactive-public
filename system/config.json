@@ -1,0 +1,13 @@
+{
+	"title": "Interaktive Inhalte",
+
+	"distributionPath": "http://interaktiv.tagesanzeiger.ch/",
+
+	"about": {
+		"title": "Impressum",
+		"description": "",
+		"credits": {
+			"Visualisierung & Programmierung": "Marc Fehr, Ruedi Lüthi"
+		}
+	}
+}

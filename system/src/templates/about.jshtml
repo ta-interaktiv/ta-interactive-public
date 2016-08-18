@@ -1,0 +1,17 @@
+<h2><%= title %></h2>
+
+<p><%= description %></p>
+
+<table>
+
+	<% _.each(credits, function(value, key){ %>
+
+		<tr>
+			<td style="padding-right: 20px;"><%= key %></td>
+			<td><%= value %></td>
+		</tr>
+
+	<% }); %>
+
+
+</table>

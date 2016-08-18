@@ -1,0 +1,32 @@
+<div class="inside">
+
+  <div class="clearfix" style="width: 100%;">
+
+    <a class="logo" href="http://www.tagesanzeiger.ch"></a>
+
+    <ul class="meta-nav">
+
+      <li>
+        <a href="about" class="route">
+          Impressum
+        </a>
+      </li>
+
+      <li class="fb-share share-icon">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=<%= shareLink %>" class="icon" target="_blank">
+          
+        </a>
+        <span class="count"></span>
+      </li>
+
+      <li class="tw-share share-icon">
+        <a href="https://twitter.com/home?status=<%= shareText %> <%= shareLink %> via @tagesanzeiger" class="icon" target="_blank">
+          
+        </a>
+      </li>
+    </ul>
+
+    </div>
+
+
+</div>

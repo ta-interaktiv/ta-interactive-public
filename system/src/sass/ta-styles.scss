@@ -1,0 +1,423 @@
+/**********************
+ *                    *
+ *     TA-STYLES      *
+ *                    *
+ **********************/
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+
+    font-family: Georgia;
+    font-size: 17px;
+    line-height: 24px;
+    text-rendering: geometricprecision;
+
+    color: $textColor;
+}
+
+p {
+    margin: 0 0 24px 0;
+}
+
+p.lead {
+    font-size: 22px;
+    line-height: 25px;
+    padding: 0px;
+}
+
+h1 {
+    font-family: "Publico Headline";
+    margin: 0 0 4px 0;
+    color: #191919;
+    font-size: 48px;
+    line-height: 50px;
+}
+/*
+body.mobile h1 {
+    font-family: "Publico Headline",Georgia,serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 26px;
+    margin: 12px 0;
+}
+*/
+
+h2 {
+    font-family: "Publico Headline";
+    margin: 0 0 5px 0;
+    font-size: 23px;
+    line-height: 24px;
+    color: $textColor;
+}
+.overlay h2, .ta-tooltip h2 {
+    font-family: "Benton Sans Cond Black";
+    font-size: 22px;
+    line-height: 25px;
+    color: $hoverColor;
+}
+.overlay.white h2, .ta-tooltip h2 {
+    color: $textColor;
+}
+
+h3 {
+    
+    font-family: Georgia;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: bold;
+
+    color: $strongColor;
+    margin: 0 0 5px 0;
+}
+h3.caption {
+    font-family: "Benton Sans Cond Black";
+    font-size: 22px;
+    line-height: 25px;
+}
+.overlay h3, .ta-tooltip h3 {
+    font-family: "Benton Sans Cond";
+    font-size: 22px;
+    line-height: 25px;
+    color: $hoverColor;
+}
+.ta-tooltip h3 {
+    color: $textColor;
+}
+.overlay h3 small, .ta-tooltip h3 small {
+    font-size: 16px;
+    color: $hoverColor;
+}
+
+strong {
+    font-weight: bold;
+}
+.overlay strong {
+    font-family: "Benton Sans Cond Black";
+}
+
+p.lead strong {
+    font-family: "Benton Sans Cond Black";
+    color: $strongColor;
+}
+
+a {
+    color: $linkColor;
+    text-decoration: none;
+}
+a:hover {
+    color: $strongColor;
+    text-decoration: none;
+}
+a:focus {
+    color: $linkColor;
+    text-decoration: none;
+}
+
+.overlay a {
+    color: $hoverColor;
+}
+.overlay.white a {
+    color: $linkColor;
+}
+
+
+td {
+    padding: 20px 0px;
+}
+
+
+.overlay, p.caption, .ta-tooltip p {
+    font-family: "Benton Sans Cond";
+    font-size: 16px;
+    line-height: 18px;
+}
+
+p.caption strong {
+    font-family: "Benton Sans Cond Black";
+}
+
+/* BOOTSTRAP override */
+
+/* button */
+.btn {
+    font-family: 'Benton Sans Cond', sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: normal;
+    color: #FFFFFF;
+    background-color: $linkColor;
+    border: 0px none !important;
+    padding: 8px 10px;
+}
+.btn:hover {
+    background-color: #222222;
+    color: #FFFFFF;
+}
+
+/* button group */
+.selection {
+    float: left;
+    clear: both;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+
+.btn-group {
+    padding-left: 0px;
+    margin: 0px;
+    float: left;
+}
+.selection .label, .nav-tabs > li > a {
+    font-family: 'Benton Sans Cond', sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: normal;
+    color: $textColor;
+}
+
+.btn-group .btn, .selection .label {
+    background: #FFFFFF;
+    padding: 8px;  
+    float: left;
+    border-radius: 0;
+}
+
+
+.btn-group > .btn {
+    color: $textColor;
+    border-left: 1px solid #222222 !important;
+    margin: 0px !important;
+}
+
+.btn:focus {
+    outline: 0 !important;
+}
+
+.btn-group > .btn:hover {
+    background-color: #eeeeee;
+}
+
+.btn-group > .btn.active {
+    background-color: $linkColor;
+    color: #FFFFFF;
+    border-left: 1px solid $linkColor !important;
+    border-right: 1px solid $linkColor !important;
+    margin-right: -1px !important;
+
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.btn-group > .btn:first-child {
+    border-left: 0px none !important;
+}
+
+.selection .label {
+    padding: 8px 0px 3px 0px;
+    border-bottom: 2px solid #222222 !important;
+    margin: 0px 5px 5px 5px;
+}
+
+.selection .label:first-child {
+    margin-left: 0px;
+}
+
+/* tabs */
+.nav-tabs {
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.nav-tabs > li.active > a {
+    font-family: "Benton Sans Cond Black";
+    color: $linkColor !important;
+}
+
+/* dropdown */
+.dropdown {
+    float: left;
+    margin-bottom: 10px;
+}
+
+.dropdown-menu {
+    border-radius: 0px;
+    padding: 0px;
+}
+
+.dropdown-menu > li > a {
+    font-family: "Benton Sans Cond";
+    font-size: 16px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.dropdown .btn {
+    background: #FFFFFF;
+    color: $textColor;
+
+    padding: 8px 6px 8px 0px;
+    margin: 0px 5px 5px 0px;
+
+    border-radius: 0;
+    border: 0px none !important;
+}
+.dropdown .btn:hover {
+    background: #EEEEEE;
+}
+
+.dropdown .btn .text {
+    border-bottom: 2px solid #222222;
+}
+
+/* tables */
+.table>thead>tr>th {
+    border-bottom: 2px solid #222222;
+    font-family: "Benton Sans Cond Black";
+}
+
+.table > tbody > tr > td {
+    border-bottom: 1px solid #ddd;
+    font-family: "Benton Sans Cond";
+}
+
+.table > thead > tr > td {
+    font-family: "Benton Sans Cond Black";
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: #ddd;
+}
+
+.table-hover > thead > tr:hover {
+    background-color: #007abf;
+    color: white;
+}
+
+/* glyphicons */
+.glyphicon-hover:hover {
+    color: #007abf;
+}
+
+
+.dropdown-menu > li > a.selected {
+  background: $linkColor;
+  color: #FFFFFF;
+  border-bottom: 0px none;
+  margin-top: -1px;
+}
+
+.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* select2 */
+.select2-container, .select2-drop {
+    font-family: "Benton Sans Cond";
+    font-weight: normal;
+    fill: $textColor;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+/* SVG for d3js Stuff */
+
+svg text {
+    font-family: "Benton Sans Cond";
+    font-weight: normal;
+    fill: $textColor;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+svg text.bold {
+    font-family: "Benton Sans Cond Black";
+    font-size: 16px;
+}
+
+svg text.link {
+    fill: $linkColor;
+    cursor: pointer;
+}
+
+svg text.small {
+    font-size: 12px;
+}
+
+svg text.smaller {
+    font-size: 10px;
+}
+
+/* LOGO */
+
+#header a.logo {
+    background-image: url('../imgs/sprite@2x.png');
+    background-size: 376px 176px;
+}
+
+body.host-localhost a.logo {
+    background-position: -285px -151px;
+    width: 91px;
+    height: 25px;
+}
+
+body.host-derbund a.logo {
+  background-position: -2px -91px;
+  width: 140px;
+  height: 41px;
+  top: 9px !important;
+}
+body.host-bernerzeitung a.logo {
+  background-position: -147px -91px;
+  width: 186px;
+  height: 20px;
+  top: 19px !important;
+}
+
+body.host-baz a.logo,
+body.host-bazonline a.logo {
+  background-position: -185px -2px;
+  width: 189px;
+  height: 38px;
+  top: 9px !important;
+}
+body.host-lematin a.logo {
+  background-position: -2px -51px;
+  width: 187px;
+  height: 35px;
+}
+
+body.host-tagi a.logo,
+body.host-tagesanzeiger a.logo,
+body.host-tages-anzeiger a.logo {
+  background-position: -195px -51px;
+  width: 165px;
+  height: 35px;
+}
+body.host-tdg a.logo {
+  background-position: -2px -137px;
+  width: 103px;
+  height: 36px;
+}
+body.host-24heures a.logo {
+  background-position: -2px -2px;
+  width: 177px;
+  height: 44px;
+}
+/*
+rect:hover {
+    cursor: pointer;
+}
+
+label:hover {
+    cursor: pointer;
+}
+*/

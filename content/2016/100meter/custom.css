@@ -1,0 +1,12 @@
+/* Most of the styles can be found in ././system/src/sass – these here are specific for each infographic */
+/* You should be able to use all the fancy Semantic-UI stuff in the whole project */
+
+h3 {
+	font-family: 'Benton Sans Cond Black';
+}
+
+@media screen and (max-width: 426px) {
+	svg > text {
+		font-size: 11px;
+	}
+}

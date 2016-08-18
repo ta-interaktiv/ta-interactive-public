@@ -1,0 +1,34 @@
+<h2 class="ui center aligned icon header">
+  <img src="./imgs/sprint.svg" width="80px" /><br/>
+  <span style="font-family: Benton Sans Cond Black; color: #007abf;">100m men</span>
+</h2>
+<div class="text-center play-button"></div>
+<div class="stop-watch"></div>
+<svg class="svg-graphic">
+
+  <defs id="mdef">
+  </defs>
+
+</svg>
+
+<audio class="pistol" style="display: none;" preload="auto">
+  <source src="data/pistol.ogg" type="audio/ogg">
+  <source src="data/pistol.mp3" type="audio/mpeg">
+</audio>
+
+<audio class="cheer" style="display: none;" preload="auto">
+  <source src="data/cheer.ogg" type="audio/ogg">
+  <source src="data/cheer.mp3" type="audio/mpeg">
+</audio>
+
+
+<div class="ui icon message">
+  <i class="external icon"></i>
+  <div class="content">
+    <div class="header">
+      This animated graphic was part of a story on the newspaper «Tages-Anzeiger» in Zurich.
+    </div>
+    <p><a href="http://www.tagesanzeiger.ch/sport/leichtathletik/bolts-siegsprint-im-vergleich-mit-allen-goldgewinnern-seit-1896/story/23290600">Click here</a> to read the full story in German</p>
+  </div>
+</div>
+

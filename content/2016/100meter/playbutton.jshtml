@@ -1,0 +1,35 @@
+<div class="ui vertical very fitted center aligned segment" style="padding-bottom: 0px;">
+
+	<h2 class="ui medium header blue" style="margin-bottom: 0px;">
+	  <div class="content" style="font-family: 'Benton Sans Cond Black';">
+	    <%= title %>
+	  </div>
+	</h2>
+
+  	<p style="font-family: 'Benton Sans Cond';"><%= lead %></p>
+
+	<div class="ui center aligned very fitted segment">
+	</div>
+
+</div>
+
+<div class="ui grid">
+  <div class="sixteen wide column" style="padding-top: 0px;">
+	<div class="ui center aligned very fitted segment" style="padding-top: 0px;">
+		<button class="play ui labeled massive icon button play-button" id="play">
+	  		<i class="play icon"></i>
+	  		<span class="button-text">Start</span>
+		</button> &nbsp;
+
+		<button class="circular ui icon button red sound-switch">
+  			<i class="volume up icon sound-icon"></i>
+		</button>
+		<br/>
+		<div class="ui red medium label noise-warning" style="margin-top: 10px;">
+		  <i class="volume up icon"></i> Watch out for the starting pistol noise
+		</div>	
+		<!-- Timer clock was originally planned, but not used because of time delay between the d3 transitions and the javascript setInterval methods on browser side. Feel free to fix it! -->	
+		<!-- <h1 style="font-family: Benton Sans Cond Light; padding-top: 15px;"><time class="time">00:00</time></h1>		 -->
+	</div>
+  </div>
+</div>

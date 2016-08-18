@@ -1,0 +1,13 @@
+{
+	"title": "Die Leere",
+
+	"distributionPath": "http://interaktiv.tagesanzeiger.ch/jahr/projekt/",
+
+	"about": {
+		"title": "Impressum",
+		"description": "Beschreibung",
+		"credits": {
+			"Was": "Wer"
+		}
+	}
+}
