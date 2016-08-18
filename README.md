@@ -46,7 +46,7 @@ GRAPHIC=projectname gulp
 
 As project name please use the folder of your project in `./content/year/..` to run the build. The should now run at <http://localhost:9000> where you can develop and test it.
 
-## Deploy the graphic via Gulp and Console
+## Deploy the graphic via Gulp in Console
 
 ```
 GRAPHIC=projectname ENV=dist gulp build
