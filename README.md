@@ -39,7 +39,7 @@ As project name please use the folder of your project in `./content/year/..` to 
 ## Deploy the graphic via Gulp and Console
 
 ```
-GRAPHIC=visualisierungsname ENV=dist gulp build
+GRAPHIC=projectname ENV=dist gulp build
 ```
 
 Use the `ENV=dist` variable in the console to create the dist-folder in `builds/` of the repository. This is the one you can now deploy to your server. The Localhost does not run in dist-mode.
