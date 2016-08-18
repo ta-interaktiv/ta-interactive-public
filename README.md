@@ -2,50 +2,45 @@
 
 ### What is this repository for? ###
 
-Interaktive Inhalte für die Publikation auf Tagesanzeiger.ch
+This is our basic stack for infographic creation at Tages-Anzeiger. Feel free to use the public version and develop visualizations with it
 
-## Voraussetzungen
+## What you need
 
 - NPM
 - Gulp
 
 ## Setup ##
 
-* NPM-Packages installieren
+* Install npm packages
 
 ```
 npm install
 ```
 
-* update the system: `git submodule init && git submodule update`
+## Configuration
 
-* get the newest system commits: `cd system/ && git pull origin master && cd ..`
+Every project has its own `config.json`-File in which you should set the properties (like distributionpath etc.)
 
-## Konfiguration
-
-Jede Visualisierung hat ein `config.json`-File, in dem einige Konfigurationseinstellungen vorgenommen werden kann.
-
-((Auflistung der vorhandenen Konfigurationsoptionen))
-
-## Testing
+## Run the local server with Gulp in Console
 
 ```
-GRAPHIC=visualisierungsname gulp
+GRAPHIC=projectname gulp
 ```
 
-Der `Default`-Task in Gulp kompiliert das Projekt lässt einen Server unter <http://localhost:9000> laufen, wo das Projekt getestet werden kann.
+As project name please use the folder of your project in `./content/year/..` to run the build. The should now run at <http://localhost:9000> where you can develop and test it.
 
-## Deployment
+## Deploy the graphic via Gulp and Console
 
 ```
 GRAPHIC=visualisierungsname ENV=dist gulp build
 ```
 
-Die Daten werden unter `builds/visualisierungsname/dist` abgelegt und können von dort auf den Server kopiert werden.
-
+Use the `ENV=dist` variable in the console to create the dist-folder in `builds/` of the repository. This is the one you can now deploy to your server. The Localhost does not run in dist-mode.
 
 ## Who do I talk to? ###
 
-* ruedi.luethi@tages-anzeiger.ch
 * marc.fehr@tages-anzeiger.ch
 * kaspar.manz@tages-anzeiger.ch
+
+Feel free to get in touch with us
+<http://www.tages-anzeiger.ch>
