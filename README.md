@@ -2,7 +2,14 @@
 
 ### What is this repository for? ###
 
-This is our basic stack for infographic creation at Tages-Anzeiger. Feel free to use the public version and develop visualizations with it
+This is our basic stack for infographic creation at Tages-Anzeiger. Feel free to use the public version and develop visualizations with it.
+
+## What tools we used
+
+* jQuery
+* Backbone
+* Semantic UI
+* D3JS
 
 ## What you need
 
