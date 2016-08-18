@@ -46,8 +46,8 @@ Use the `ENV=dist` variable in the console to create the dist-folder in `builds/
 
 ## Who do I talk to? ###
 
-* marc.fehr@tages-anzeiger.ch
-* kaspar.manz@tages-anzeiger.ch
+* marc.fehr@tages-anzeiger.ch (Twitter: https://twitter.com/mrcfhr)
+* kaspar.manz@tages-anzeiger.ch (Twitter: https://twitter.com/xeophin)
 
 Feel free to get in touch with us
 <http://www.tages-anzeiger.ch>
