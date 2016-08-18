@@ -11,9 +11,11 @@ This is our basic stack for infographic creation at Tages-Anzeiger. Feel free to
 
 ## Setup ##
 
-* Install npm packages
+* Install npm packages both in the main directory as well as within /system
 
 ```
+npm install
+cd system
 npm install
 ```
 
